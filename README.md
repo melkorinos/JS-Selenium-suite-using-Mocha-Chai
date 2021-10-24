@@ -22,9 +22,9 @@ To run the solution please follow these steps:
 
 1.Download and unzip the contents  
 2.Open console in said directory and run npm install   
-3.The directory includes a batch file that should handle the chromedriver installation for Mac.
+3.The directory includes a bash file that should handle the chromedriver installation for Mac.  
 
-Optional steps:
+Optional steps:  
 3.Download chromedriver for your chrome version : https://chromedriver.chromium.org/downloads   
 4.Add chromedriver to PATH (instructions : https://www.kenst.com/2015/03/including-the-chromedriver-location-in-macos-system-path/)  
 

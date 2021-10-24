@@ -1,0 +1,241 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-10-24T16:02:17.052Z",
+    "end": "2021-10-24T16:02:29.021Z",
+    "duration": 11969,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c34c42cf-771c-4e6e-b78c-5bde412a9b8f",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4ab2a896-8ea9-449a-8d26-67175019ffbb",
+          "title": "Extra : New user tests",
+          "fullFile": "C:\\Users\\Dimitris\\Desktop\\study\\Ticketswap final\\test\\newUserTests.js",
+          "file": "\\test\\newUserTests.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Extra : New user tests\"",
+              "fullTitle": "Extra : New user tests \"before each\" hook in \"Extra : New user tests\"",
+              "timedOut": null,
+              "duration": 690,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser(\"chrome\").build();\ndriver.get(\"https://www.ticketswap.com/\");",
+              "err": {},
+              "uuid": "3ad7c0a1-7ba1-431e-9a99-c489d7be8e83",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Extra : New user tests\"",
+              "fullTitle": "Extra : New user tests \"after each\" hook in \"Extra : New user tests\"",
+              "timedOut": null,
+              "duration": 31,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "b26b3e81-f6f7-46e6-abb2-ab88b6de588a",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Ensures facebook login element exists from sell ticket path",
+              "fullTitle": "Extra : New user tests Ensures facebook login element exists from sell ticket path",
+              "timedOut": null,
+              "duration": 3673,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//click the sell tickets button\nawait driver.findElement(By.xpath('//*[@id=\"__next\"]/div[1]/div/nav/ul/li[6]/a')).click();\n//wait till onboarding page loads\nawait driver.wait(until.elementLocated(By.xpath('//*[@id=\"__next\"]/div[3]/div[1]/button'),10000));\n//click the start selling button\nawait driver.findElement(By.className('css-8cc4q9 e1dvqv261')).click();\n//wait till login pop up loads, look for page header\nawait driver.wait(until.elementLocated(By.xpath('/html/body/ticketswap-portal[7]/div/div/header'),10000));\n\n//find the facebook login element\nawait driver.findElement(By.xpath('/html/body/ticketswap-portal[7]/div/div/div/div/div/div/div/button[1]')).then((element)=>{\n  //chai assert\n  expect(element).to.exist;\n});\n\n\n\n//new it block goes here",
+              "err": {},
+              "uuid": "663b752b-2a30-405b-b13a-a6a427056fe4",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "663b752b-2a30-405b-b13a-a6a427056fe4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3673,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "3750e772-43ed-477d-be4b-72624f9b1f9a",
+          "title": "Assignment : Search field tests",
+          "fullFile": "C:\\Users\\Dimitris\\Desktop\\study\\Ticketswap final\\test\\searchBarTests.js",
+          "file": "\\test\\searchBarTests.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Assignment : Search field tests\"",
+              "fullTitle": "Assignment : Search field tests \"before each\" hook in \"Assignment : Search field tests\"",
+              "timedOut": null,
+              "duration": 595,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "driver = await new Builder().forBrowser(\"chrome\").build();\ndriver.get(\"https://www.ticketswap.com/\");",
+              "err": {},
+              "uuid": "1e07cbdc-0a65-4af2-af90-4e6a6ef9afc8",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Assignment : Search field tests\"",
+              "fullTitle": "Assignment : Search field tests \"after each\" hook in \"Assignment : Search field tests\"",
+              "timedOut": null,
+              "duration": 27,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "3df7b666-e9dc-4f9c-8a4e-01606530c68c",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Ensures special characters are handled from the server: True",
+              "fullTitle": "Assignment : Search field tests Ensures special characters are handled from the server: True",
+              "timedOut": null,
+              "duration": 5184,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "var search_query = naughty;\n      //send keys to the search box\n      await driver.findElement(By.id(\"site-search-input\")).sendKeys(search_query);\n      // CODE HERE\n  \n      //wait till results drop down appears\n      await driver.wait(until.elementLocated(By.xpath('//*[@id=\"site-search-menu\"]/div[3]/a'),10000));\n      //find and click more results button\n      await driver.findElement(By.xpath('//*[@id=\"site-search-menu\"]/div[3]/a')).click();\n      //wait till next page loads\n      await driver.wait(until.elementLocated(By.xpath('//*[@id=\"__next\"]/div[2]/div[1]/h1'),10000));\n      //ensure the next page has results\n      var results = await driver.findElement(By.className('css-11rlpdz eh8fd905'));\n      //chai assert\n      expect(results).to.exist;\n      expect(results.length).to.be.greaterThan(0);",
+              "err": {
+                "message": "AssertionError: expected undefined to be a number or a date",
+                "estack": "AssertionError: expected undefined to be a number or a date\n    at Context.<anonymous> (test\\searchBarTests.js:54:36)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
+                "diff": null
+              },
+              "uuid": "06fa28ca-6792-4436-a664-166f85410e1c",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Checks search query is included in test results",
+              "fullTitle": "Assignment : Search field tests Checks search query is included in test results",
+              "timedOut": null,
+              "duration": 5047,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var search_query = \"Band\";\n    //send keys to the search box\n    await driver.findElement(By.id(\"site-search-input\")).sendKeys(search_query);\n    //wait till results drop down appears\n    await driver.wait(until.elementLocated(By.xpath('//*[@id=\"site-search-menu\"]/div[3]/a'),10000));\n    //find and click more results button\n    await driver.findElement(By.xpath('//*[@id=\"site-search-menu\"]/div[3]/a')).click();\n    //wait till next page loads\n    await driver.wait(until.elementLocated(By.xpath('//*[@id=\"__next\"]/div[2]/div[1]/h3'),10000));\n    //collect all the search result elements and get their text\n    let elements = await driver.findElements(By.className('css-11rlpdz eh8fd905'))\n    for (let element of elements) {\n      const text = await element.getText();\n      //assert the text contains the search query\n      expect(text).to.include(search_query);\n    }",
+              "err": {},
+              "uuid": "75ac73f6-7e8e-41df-b7ea-7ab997b9cf47",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "75ac73f6-7e8e-41df-b7ea-7ab997b9cf47"
+          ],
+          "failures": [
+            "06fa28ca-6792-4436-a664-166f85410e1c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10231,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "9.1.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "autoOpen": "true"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

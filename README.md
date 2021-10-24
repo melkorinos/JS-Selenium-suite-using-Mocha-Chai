@@ -24,20 +24,20 @@ To run the solution please follow these steps:
 2.Open console in said directory and run npm install   
 3.The directory includes a bash file that should handle the chromedriver installation for Mac.  
 
-Optional steps:  
+Steps in case bash file solution fails to run:  
 3.Download chromedriver for your chrome version : https://chromedriver.chromium.org/downloads   
 4.Add chromedriver to PATH (instructions : https://www.kenst.com/2015/03/including-the-chromedriver-location-in-macos-system-path/)  
 
 5.npm test -- --grep "Assignment : Search field tests"  
 
-The solution is written in Javascript with Selenium WebDriver using Mocha test framework, Chai assertion library and mochawesome for report generation.  
+The solution is written in Javascript with Selenium WebDriver using Mocha test framework, Chai assertion library and Mochawesome for report generation.  
 An alternative solution was written with Python with Selenium WebDriver and unittest framework.   
 Javascript was selected as the solution was more finalized and the results were more presentable. 
 
 **Scenario #1 :** Search field properly handled special characters.  
 **Expected result :** The search functionality and the site continue to function properly without any error.  
-**Test Steps :** Landing page -> Select search field -> Enter special characters in search field ->Load more results -> Ensure the first search result exists  
- TEXXTTTTT ABOUT list of things
+**Test Steps :** Landing page -> Select search field -> Enter special characters in search field ->Load more results -> Ensure :  
+ first test assertions
 
 **Scenario #2 :** A user searches the site for an event.  
 **Expected result :** The results of a search query should partially match the query itself.  

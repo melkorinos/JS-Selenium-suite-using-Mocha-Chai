@@ -36,12 +36,13 @@ Javascript was selected as the solution was more finalized and the results were 
 
 **Scenario #1 :** Search field properly handled special characters.  
 **Expected result :** The search functionality and the site continue to function properly without any error.  
-**Test Steps :** Landing page -> Select search field -> Enter special characters in search field -> Verify search either displayes results or "No results found"  
-For this test a list of malicious strings is used from https://github.com/minimaxir/big-list-of-naughty-strings
+**Test Steps :** Landing page -> Select search field -> Enter special characters in search field -> Verify site search menu exist and has text. 
+For this test a list of malicious strings is used from https://github.com/minimaxir/big-list-of-naughty-strings.
+The file contains a MAX_STRINGS_TESTED constant that is set to 3 so only the three strings of the list are tested,
 
 **Scenario #2 :** A user searches the site for an event.  
 **Expected result :** The results of a search query should partially match the query itself.  
-**Test Steps :** Landing page -> Enter query in search field -> Ensure pop up results contain the user's query -> Load more results -> Verify results contain the user's query
+**Test Steps :** Landing page -> Enter query in search field -> Ensure pop up results contain the user's query -> Load more results -> Verify results contain the user's query.
 
 
 

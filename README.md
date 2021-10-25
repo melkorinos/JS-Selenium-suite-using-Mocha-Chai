@@ -33,6 +33,7 @@ Steps in case bash file solution fails to run:
 The solution is written in Javascript with Selenium WebDriver using Mocha test framework, Chai assertion library and Mochawesome for report generation.  
 An alternative solution was written with Python with Selenium WebDriver and unittest framework.   
 Javascript was selected as the solution was more finalized and the results were more presentable. 
+The directory also contains the latest test report for proof that the tests were run.
 
 **Scenario #1 :** Search field properly handled special characters.  
 **Expected result :** The search functionality and the site continue to function properly without any error.  
@@ -44,6 +45,7 @@ The file contains a MAX_STRINGS_TESTED constant that is set to 3 so only the thr
 **Expected result :** The results of a search query should partially match the query itself.  
 **Test Steps :** Landing page -> Enter query in search field -> Ensure pop up results contain the user's query -> Load more results -> Verify results contain the user's query.
 
+P.S : Apologies for the many calls to your server during the making of this suite.
 
 
 

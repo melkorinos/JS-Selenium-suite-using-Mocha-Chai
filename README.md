@@ -27,7 +27,7 @@ To run the solution please follow these steps:
 Steps in case bash file solution fails to run:  
 3.Download chromedriver for your chrome version : https://chromedriver.chromium.org/downloads   
 4.Add chromedriver to PATH (instructions : https://www.kenst.com/2015/03/including-the-chromedriver-location-in-macos-system-path/)  
-
+------------------------------------------------------------------------------------------------------------------------------------
 5.npm test -- --grep "Assignment : Search field tests"  
 
 The solution is written in Javascript with Selenium WebDriver using Mocha test framework, Chai assertion library and Mochawesome for report generation.  

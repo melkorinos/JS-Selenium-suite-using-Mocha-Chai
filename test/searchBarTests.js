@@ -27,23 +27,33 @@ describe("Assignment : Search field tests", async function () {
 
     //it block
     it(`Test 1: Ensures special characters are handled from the server. Character is:  ${naughty}`, async function () {
-
+      
+      //assign the naughty string as a search query
       var search_query = naughty;
 
       //send keys to the search box
       await driver.findElement(By.id('site-search-input')).sendKeys(search_query);
 
       //wait for 1 second
-      driver.sleep(1000);
+      await driver.sleep(1000);
       
-      //get the element that includes the text
-      let result = await driver.wait(until.elementLocated(By.className('css-5gnb7e eeor7st12'),10000));
+      //get the either the result of the search or the element that states no results found using css selectors
+      let result = await driver.wait(until.elementLocated(By.css('.css-vyo6tp.eloqthd2, .css-5gnb7e.eeor7st12 h3'),10000));
 
-      //Assert the element exists and has text 
-      let resultText = await result.getText();
-      //expect the element to exist and to have text
+      //assert the result exists 
       expect(result).to.exist;
-      expect(resultText).to.exist;
+      //get the text and the tag name of the result
+      let resultText = await result.getText();
+      let tagName = await result.getTagName();
+
+      //check if the result is an h3 element
+      if ( tagName === "h3" ) {
+        //if it is h3 then check to see if it includes  " No results"
+        expect(resultText).to.includes('No results');
+      }else {
+        //if it is not h3 then it is search results were returned therefore check if it includes at least 3 characters
+        expect(resultText.length).to.be.greaterThan(3);
+      }
       
     });
   })

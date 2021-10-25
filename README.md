@@ -38,8 +38,8 @@ The directory also contains the latest test report for proof that the tests were
 **Scenario #1 :** Search field properly handled special characters.  
 **Expected result :** The search functionality and the site continue to function properly without any error.  
 **Test Steps :** Landing page -> Select search field -> Enter special characters in search field -> Verify a result element is returned and it either includes "No results" OR has at least 3 characters.  
--For this test a list of malicious strings is used from https://github.com/minimaxir/big-list-of-naughty-strings.
--The file contains a MAX_STRINGS_TESTED constant that is set to 3 so only the three strings of the list are tested. Update said value for more or less tests.
+*For this test a list of malicious strings is used from https://github.com/minimaxir/big-list-of-naughty-strings.
+*The file contains a MAX_STRINGS_TESTED constant that is set to 3 so only the three strings of the list are tested. Update said value for more or less tests.
 
 **Scenario #2 :** A user searches the site for an event.  
 **Expected result :** The results of a search query should partially match the query itself.  

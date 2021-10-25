@@ -35,7 +35,7 @@ An alternative solution was written with Python with Selenium WebDriver and unit
 Javascript was selected as the solution was more finalized and the results were more presentable. 
 The directory also contains the latest test report for proof that the tests were run.
 
-**Scenario #1 :** Search field properly handled special characters.  
+**Scenario #1 :** Search field properly handles special characters.  
 **Expected result :** The search functionality and the site continue to function properly without any error.  
 **Test Steps :** Landing page -> Select search field -> Enter special characters in search field -> Verify a result element is returned and it either includes "No results" OR has at least 3 characters.  
 * For this test a list of malicious strings is used from https://github.com/minimaxir/big-list-of-naughty-strings.

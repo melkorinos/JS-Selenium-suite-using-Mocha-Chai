@@ -3,7 +3,7 @@ var expect = require("chai").expect;
 var driver;
 
 //desribe block
-describe("Extra : New user tests", async function () {
+describe("Tests for another feature would go here", async function () {
 
   //before every it block
   beforeEach(async() =>{
@@ -17,7 +17,7 @@ describe("Extra : New user tests", async function () {
   })
 
   //it block
-  it("Ensures facebook login element exists from sell ticket path", async function () {
+  it("First test of other feature, this sample tests if there is a facebook element for a non logged user", async function () {
     
     //click the sell tickets button
     await driver.findElement(By.xpath('//*[@id="__next"]/div[1]/div/nav/ul/li[6]/a')).click();
@@ -36,8 +36,6 @@ describe("Extra : New user tests", async function () {
       //chai assert
       expect(element).to.exist;
     });
-    
-    
     
     //new it block goes here
     

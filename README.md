@@ -21,14 +21,14 @@ The purpose was to evaluate standard and common actions so no assumptions were m
 To run the solution please follow these steps:  
 
 1.Download and unzip the contents  
-2.Open console in said directory and run npm install   
-3.The directory includes a bash file that should handle the chromedriver installation for Mac.  
+2.Open console in said directory and run `npm install`   
+3.The directory includes a .sh file that should handle the chromedriver installation for Mac. Likely, the file will need to be made executable to run using `chmod +x`.
 ##
-Steps in case bash file solution fails to run:  
+Steps in case .sh file solution fails to run:  
 4.Download chromedriver for your chrome version : https://chromedriver.chromium.org/downloads   
 5.Add chromedriver to PATH (instructions : https://www.kenst.com/2015/03/including-the-chromedriver-location-in-macos-system-path/)  
 ##
-6.Run npm test -- --grep "Assignment : Search field tests" for only the search bar feature tests, or npm test for hypothetical tests of secondary feature.
+6.Run `npm test` OR `npm test -- --grep "Assignment : Search field tests"` for only the search bar feature tests.
 
 The solution is written in Javascript with Selenium WebDriver using Mocha test framework, Chai assertion library and Mochawesome for report generation.  
 An alternative solution was written with Python with Selenium WebDriver and unittest framework.   

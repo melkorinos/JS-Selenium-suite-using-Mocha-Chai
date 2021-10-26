@@ -17,7 +17,7 @@ describe("Tests for another feature would go here", async function () {
   })
 
   //it block
-  it("First test of other feature, this sample tests if there is a facebook element for a non logged user", async function () {
+  it("First test of other feature, this sample test checks if there is a facebook element for a non logged user", async function () {
     
     //click the sell tickets button
     await driver.findElement(By.xpath('//*[@id="__next"]/div[1]/div/nav/ul/li[6]/a')).click();

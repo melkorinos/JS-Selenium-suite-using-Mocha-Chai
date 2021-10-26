@@ -26,7 +26,7 @@ describe("Assignment : Search field tests", async function () {
   naughtyStrings.forEach(function(naughty) {
 
     //it block
-    it(`Test 1: Ensures special characters are handled from the server. Character is:  ${naughty}`, async function () {
+    it(`Test 1: Ensures special characters are handled from the server. Character is:   ${naughty}`, async function () {
       
       //assign the naughty string as a search query
       var search_query = naughty;
@@ -37,7 +37,7 @@ describe("Assignment : Search field tests", async function () {
       //wait for 1 second
       await driver.sleep(1000);
       
-      //get the either the result of the search or the element that states no results found using css selectors
+      //get either the first result of the search, or the element that states no results found 
       let result = await driver.wait(until.elementLocated(By.css('.css-vyo6tp.eloqthd2, .css-5gnb7e.eeor7st12 h3'),10000));
 
       //assert the result exists 
@@ -51,13 +51,12 @@ describe("Assignment : Search field tests", async function () {
         //if it is h3 then check to see if it includes  " No results"
         expect(resultText).to.includes('No results');
       }else {
-        //if it is not h3 then it is search results were returned therefore check if it includes at least 3 characters
+        //else it is a search result therefore check if it includes at least 3 characters
         expect(resultText.length).to.be.greaterThan(3);
       }
       
     });
   })
-
 
   //it block
   it("Test 2 : Checks search query is included in test results", async function () {
@@ -71,15 +70,23 @@ describe("Assignment : Search field tests", async function () {
     //wait till results drop down appears
     await driver.wait(until.elementLocated(By.xpath('//*[@id="site-search-menu"]/div[3]/a'),10000));
 
+    //collect all the pop up search result elements and get their text
+    let popUpElements = await driver.findElements(By.className('css-vyo6tp eloqthd2'))
+    for (let element of popUpElements) {
+      let text = await element.getText();
+      //assert the text contains the search query
+      expect(text).to.include(search_query);
+    }
+
     //find and click more results button
     await driver.findElement(By.xpath('//*[@id="site-search-menu"]/div[3]/a')).click();
 
-    //wait till next page loads
+    //wait till next page loads by waiting for the h3 text of the search result
     await driver.wait(until.elementLocated(By.xpath('//*[@id="__next"]/div[2]/div[1]/h3'),10000));
 
     //collect all the search result elements and get their text
-    let elements = await driver.findElements(By.className('css-11rlpdz eh8fd905'))
-    for (let element of elements) {
+    let searchResultElements = await driver.findElements(By.className('css-11rlpdz eh8fd905'))
+    for (let element of searchResultElements) {
       let text = await element.getText();
       //assert the text contains the search query
       expect(text).to.include(search_query);

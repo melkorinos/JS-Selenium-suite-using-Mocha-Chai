@@ -1,7 +1,7 @@
 # Ticketswap assignment
 Identify a feature that is critical, define two scenarios and set up an automation test suit to cover these scenarios.
  
-## Task description
+## Introduction
 A number of critical features can be identified :   
 - User account functionality 
 - Cart functionality 

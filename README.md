@@ -30,10 +30,9 @@ Steps in case .sh file solution fails to run:
 ##
 6.Run `npm test` for all tests OR `npm test -- --grep "Assignment : Search field tests"` for only the search bar feature tests.
 
-The solution is written in Javascript with Selenium WebDriver using Mocha test framework, Chai assertion library and Mochawesome for report generation.  
+The solution is written in Javascript with Selenium WebDriver using Mocha test framework, Chai assertion library and Mochawesome for report generation. The latest report is included as evidence but will be overwritten once the solution runs.  
 An alternative solution was written with Python with Selenium WebDriver and unittest framework.   
 Javascript was selected as the solution was more finalized and the results were more presentable. 
-The directory also contains the latest test report for proof that the tests were run.
 
 **Scenario #1 :** Search field properly handles special characters.  
 **Expected result :** The search functionality and the site continue to function properly without any error.  

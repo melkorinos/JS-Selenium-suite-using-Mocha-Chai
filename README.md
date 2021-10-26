@@ -34,6 +34,8 @@ The solution is written in Javascript with Selenium WebDriver using Mocha test f
 An alternative solution was written with Python with Selenium WebDriver and unittest framework.   
 Javascript was selected as the solution was more finalized and the results were more presentable. 
 
+##Test Scenarios
+
 **Scenario #1 :** Search field properly handles special characters.  
 **Expected result :** The search functionality and the site continue to function properly without any error.  
 **Test Steps :** Landing page -> Select search field -> Enter special characters in search field -> Verify a result element is returned and it either includes "No results" OR has at least 3 characters.  

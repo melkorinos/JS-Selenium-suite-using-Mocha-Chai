@@ -28,7 +28,7 @@ Steps in case .sh file solution fails to run:
 4.Download chromedriver for your chrome version : https://chromedriver.chromium.org/downloads   
 5.Add chromedriver to PATH (instructions : https://www.kenst.com/2015/03/including-the-chromedriver-location-in-macos-system-path/)  
 ##
-6.Run `npm test` OR `npm test -- --grep "Assignment : Search field tests"` for only the search bar feature tests.
+6.Run `npm test` for all tests OR `npm test -- --grep "Assignment : Search field tests"` for only the search bar feature tests.
 
 The solution is written in Javascript with Selenium WebDriver using Mocha test framework, Chai assertion library and Mochawesome for report generation.  
 An alternative solution was written with Python with Selenium WebDriver and unittest framework.   

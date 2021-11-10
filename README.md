@@ -1,5 +1,6 @@
 # Ticketswap assignment
-Identify a feature that is critical, define two scenarios and set up an automation test suit to cover these scenarios.
+Identify a feature that is critical, define two scenarios and set up an automation test suit to cover these scenarios.  
+Future tasks would include splitting the locators in a separate file, creating a folder structure for tests, a Webdriver Builder and a page object per page for web elements 
  
 ## Introduction
 A number of critical features can be identified :   
